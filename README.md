@@ -5,6 +5,7 @@
 # Legends OBS Cursor - OBS Cursor Overlay With Momentum Ticks
 
 [![Validate](https://github.com/avalonreset/legends-obs-cursor/actions/workflows/validate.yml/badge.svg)](https://github.com/avalonreset/legends-obs-cursor/actions/workflows/validate.yml)
+[![Release](https://img.shields.io/github/v/release/avalonreset/legends-obs-cursor)](https://github.com/avalonreset/legends-obs-cursor/releases)
 [![License: GPL v2](https://img.shields.io/badge/license-GPL--2.0--or--later-blue.svg)](LICENSE)
 [![OBS](https://img.shields.io/badge/OBS-Lua%20filter-302E31?logo=obsstudio)](https://obsproject.com/)
 [![Platform](https://img.shields.io/badge/platform-Windows-0078D4?logo=windows)](#requirements)

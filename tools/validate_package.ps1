@@ -11,6 +11,7 @@ $required = @(
     "CHANGELOG.md",
     "CONTRIBUTING.md",
     "SECURITY.md",
+    ".github/release.yml",
     "legends_cursor_filter.lua",
     "legends_cursor_filter.effect",
     "install_into_obs.ps1",
