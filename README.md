@@ -50,12 +50,6 @@ For the real 4K scale version, watch the
 momentum ticks, left-click, right-click, comet trail, stretch/wake, and finder
 modes on a simulated `3840 x 2160` OBS canvas.
 
-<p align="center">
-  <img src="assets/screenshots/momentum-ticks.png" alt="Legends OBS Cursor momentum tick keyframe" width="32%">
-  <img src="assets/screenshots/left-click-ripple.png" alt="Legends OBS Cursor left-click ripple keyframe" width="32%">
-  <img src="assets/screenshots/right-click-diamond.png" alt="Legends OBS Cursor right-click diamond keyframe" width="32%">
-</p>
-
 ## Requirements
 
 | Requirement | Notes |
