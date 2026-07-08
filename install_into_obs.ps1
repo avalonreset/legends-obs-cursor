@@ -40,6 +40,11 @@ $DestRoot = Join-Path $ObsConfigRoot "scripts\legends-cursor-filter"
 $DestLua = Join-Path $DestRoot "legends_cursor_filter.lua"
 $DestEffect = Join-Path $DestRoot "legends_cursor_filter.effect"
 
+$runningObs = Get-Process -Name "obs64", "obs32" -ErrorAction SilentlyContinue
+if ($runningObs -and -not $Force -and -not $CopyOnly) {
+    throw "OBS is currently running. Close OBS first, or rerun with -Force if you accept that OBS may overwrite the scene JSON on exit."
+}
+
 New-Item -ItemType Directory -Path $DestRoot -Force | Out-Null
 Copy-Item -LiteralPath $SourceLua -Destination $DestLua -Force
 Copy-Item -LiteralPath $SourceEffect -Destination $DestEffect -Force
@@ -51,11 +56,6 @@ Write-Host "  $DestEffect"
 if ($CopyOnly) {
     Write-Host "CopyOnly requested; scene collection was not changed."
     exit 0
-}
-
-$runningObs = Get-Process -Name "obs64", "obs32" -ErrorAction SilentlyContinue
-if ($runningObs -and -not $Force) {
-    throw "OBS is currently running. Close OBS first, or rerun with -Force if you accept that OBS may overwrite the scene JSON on exit."
 }
 
 function Read-IniValue {

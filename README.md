@@ -111,8 +111,8 @@ The important default is visual preservation: rotating dots and click effects st
 The PowerShell installer:
 
 1. Resolves the OBS config root from `%APPDATA%\obs-studio`.
-2. Copies script files into `scripts\legends-cursor-filter`.
-3. Refuses to edit OBS scene JSON while OBS is running unless `-Force` is passed.
+2. Refuses normal installs while OBS is running unless `-Force` is passed.
+3. Copies script files into `scripts\legends-cursor-filter`.
 4. Creates a `.legends-cursor-backup-YYYYMMDD-HHMMSS` scene backup before editing.
 5. Preserves the filter name `Legends Cursor Filter`.
 6. Preserves the filter id `legends_cursor_filter`.

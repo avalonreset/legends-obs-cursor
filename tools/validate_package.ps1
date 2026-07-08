@@ -60,6 +60,25 @@ if ($installer -match 'Legends Momentum Cursor Filter') {
 if ($installer -notmatch 'Copy-Item -LiteralPath \$ScenePath -Destination \$BackupPath') {
     throw "Installer must backup the OBS scene collection before editing."
 }
+$obsGuardIndex = $installer.IndexOf('$runningObs = Get-Process -Name "obs64", "obs32"')
+$firstCopyIndex = $installer.IndexOf('Copy-Item -LiteralPath $SourceLua')
+if ($obsGuardIndex -lt 0 -or $firstCopyIndex -lt 0 -or $obsGuardIndex -gt $firstCopyIndex) {
+    throw "Installer must check whether OBS is running before copying script files."
+}
+if ($installer -notmatch '\$runningObs -and -not \$Force -and -not \$CopyOnly') {
+    throw "Installer OBS-running guard must protect normal installs while allowing explicit CopyOnly refreshes."
+}
+
+$workflow = Get-Content -LiteralPath ".github/workflows/validate.yml" -Raw
+if ($workflow -notmatch '(?m)^permissions:\s*\r?\n\s+contents:\s+read') {
+    throw "GitHub Actions workflow must declare least-privilege contents: read permissions."
+}
+if ($workflow -match 'actions/checkout@v[0-9]+') {
+    throw "GitHub Actions checkout must be pinned to a commit SHA, not a mutable version tag."
+}
+if ($workflow -notmatch 'actions/checkout@[0-9a-f]{40}') {
+    throw "GitHub Actions checkout must use a 40-character commit SHA."
+}
 
 $trackedLeakPatterns = @(
     ('C:' + '\\Users\\rccol'),
