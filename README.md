@@ -14,7 +14,7 @@ Legends OBS Cursor is an OBS cursor overlay that draws a stylized animated curso
 ## Table Of Contents
 
 - [What It Does](#what-it-does)
-- [Screenshots](#screenshots)
+- [Demo](#demo)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Configuration](#configuration)
@@ -33,11 +33,22 @@ Legends OBS Cursor is an OBS cursor overlay that draws a stylized animated curso
 - Adds optional `Enable floaty follow` and `Floaty lag ms` controls.
 - Installs conservatively with PowerShell and backs up the OBS scene collection before editing.
 
-## Screenshots
+## Demo
+
+The demo below is a deterministic simulation of the Lua filter defaults. It models
+floaty follow, speed-driven spin, rotating momentum ticks, comet trail samples,
+left-click ripples, and the magenta right-click diamond burst.
 
 <p align="center">
-  <img src="assets/screenshots/momentum-ticks.png" alt="Legends OBS Cursor momentum tick preview" width="48%">
-  <img src="assets/screenshots/right-click-diamond.png" alt="Legends OBS Cursor right-click diamond preview" width="48%">
+  <img src="assets/demo/legends-cursor-demo.webp" alt="Animated demo of Legends OBS Cursor showing momentum ticks, left-click ripple, right-click diamond, and floaty follow motion" width="100%">
+</p>
+
+If your viewer does not animate WebP, use the [GIF fallback](assets/demo/legends-cursor-demo.gif).
+
+<p align="center">
+  <img src="assets/screenshots/momentum-ticks.png" alt="Legends OBS Cursor momentum tick keyframe" width="32%">
+  <img src="assets/screenshots/left-click-ripple.png" alt="Legends OBS Cursor left-click ripple keyframe" width="32%">
+  <img src="assets/screenshots/right-click-diamond.png" alt="Legends OBS Cursor right-click diamond keyframe" width="32%">
 </p>
 
 ## Requirements
@@ -117,7 +128,7 @@ powershell -ExecutionPolicy Bypass -File .\install_into_obs.ps1 -TargetSourceNam
 | `install_into_obs.ps1` | Backup-first Windows installer. |
 | `install_into_obs.cmd` | Double-click wrapper for the installer. |
 | `install_and_launch_obs.cmd` | Double-click wrapper that installs and launches OBS. |
-| `assets/` | README banner, social preview, and screenshots. |
+| `assets/` | README banner, animated demo, social preview, and keyframes. |
 | `tools/render_assets.py` | Rebuilds generated README assets. |
 | `tools/validate_package.ps1` | Local package validation gate. |
 

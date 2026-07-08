@@ -17,7 +17,10 @@ $required = @(
     "install_into_obs.cmd",
     "install_and_launch_obs.cmd",
     "assets/banner.webp",
+    "assets/demo/legends-cursor-demo.webp",
+    "assets/demo/legends-cursor-demo.gif",
     "assets/screenshots/momentum-ticks.png",
+    "assets/screenshots/left-click-ripple.png",
     "assets/screenshots/right-click-diamond.png"
 )
 

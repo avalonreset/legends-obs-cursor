@@ -22,6 +22,7 @@ Use this checklist before making a public GitHub release.
 ## Documentation
 
 - [ ] README screenshots match the current visual defaults.
+- [ ] Animated README demo shows momentum, left-click, right-click, and floaty follow.
 - [ ] `CREDITS.md` has any new third-party attribution.
 - [ ] `NOTICE` preserves required third-party license notices.
 - [ ] `CHANGELOG.md` has release notes.

@@ -22,11 +22,14 @@ sliders, or toggles.
 4. Add experimental visuals as modes.
 5. Keep settings names clear enough for OBS users who are editing a live scene.
 
-## Screenshot Guidance
+## Demo Guidance
 
 When documenting visual changes, capture or render at least:
 
 - Momentum ticks during cursor motion.
+- Left-click ripple feedback.
 - Right-click feedback.
 - A normal idle or low-motion state.
 
+The README animation should be generated from the same visual rules as the Lua
+filter, not drawn as a separate marketing mockup.
