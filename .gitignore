@@ -1,0 +1,22 @@
+.github-audit/
+.env
+.env.*
+!.env.example
+
+# Local workstation and agent artifacts
+.omnigent/
+*.tar.gz
+*.zip
+*.7z
+*.bak
+*.tmp
+*.log
+
+# OBS scene backups and exports
+*.legends-cursor-backup-*
+*.before-*
+
+# Python cache from local asset tooling
+__pycache__/
+*.pyc
+

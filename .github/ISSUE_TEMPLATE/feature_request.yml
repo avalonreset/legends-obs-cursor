@@ -1,0 +1,29 @@
+name: Feature request
+description: Suggest a new mode, setting, or installer improvement.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What should change?
+      description: Describe the feature and why it would help.
+    validations:
+      required: true
+  - type: dropdown
+    id: default-impact
+    attributes:
+      label: Should this affect the default look?
+      options:
+        - No, make it optional
+        - Yes, it is a bug fix
+        - Unsure
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Visual references
+      description: Add screenshots, clips, or examples if this is a visual effect.
+

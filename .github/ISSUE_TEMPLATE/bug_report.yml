@@ -1,0 +1,37 @@
+name: Bug report
+description: Report a problem with the OBS cursor filter or installer.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the behavior and what you expected instead.
+    validations:
+      required: true
+  - type: input
+    id: obs-version
+    attributes:
+      label: OBS version
+      placeholder: "Example: OBS 32.1.2"
+  - type: dropdown
+    id: install-method
+    attributes:
+      label: Install method
+      options:
+        - PowerShell installer
+        - Manual Tools > Scripts install
+        - Other
+  - type: textarea
+    id: visual
+    attributes:
+      label: Visual evidence
+      description: Add screenshots or a short clip if the issue is visual.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Paste only relevant OBS log lines. Remove private paths if needed.
+
