@@ -6,6 +6,7 @@ Set-Location $root
 $required = @(
     "README.md",
     "LICENSE",
+    "NOTICE",
     "CREDITS.md",
     "CHANGELOG.md",
     "CONTRIBUTING.md",

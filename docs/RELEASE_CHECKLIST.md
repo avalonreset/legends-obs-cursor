@@ -23,6 +23,7 @@ Use this checklist before making a public GitHub release.
 
 - [ ] README screenshots match the current visual defaults.
 - [ ] `CREDITS.md` has any new third-party attribution.
+- [ ] `NOTICE` preserves required third-party license notices.
 - [ ] `CHANGELOG.md` has release notes.
 - [ ] GitHub topics and description are set.
 - [ ] Social preview image is uploaded after the repo becomes public.
@@ -32,4 +33,3 @@ Use this checklist before making a public GitHub release.
 - [ ] Tag uses semantic versioning, such as `v0.1.0`.
 - [ ] Release notes include install steps and OBS version tested.
 - [ ] Release zip excludes local OBS config, recordings, and workstation artifacts.
-

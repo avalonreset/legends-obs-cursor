@@ -149,4 +149,5 @@ Legends OBS Cursor is an Avalon Reset project. See [CREDITS.md](CREDITS.md) for 
 
 ## License
 
-Licensed under GPL-2.0-or-later. See [LICENSE](LICENSE).
+Licensed under GPL-2.0-or-later. See [LICENSE](LICENSE). Third-party notices
+and attribution context are preserved in [NOTICE](NOTICE) and [CREDITS.md](CREDITS.md).
