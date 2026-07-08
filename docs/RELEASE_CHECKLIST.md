@@ -23,6 +23,7 @@ Use this checklist before making a public GitHub release.
 
 - [ ] README screenshots match the current visual defaults.
 - [ ] Animated README demo shows momentum, left-click, right-click, and floaty follow.
+- [ ] 4K60 showcase video validates as `3840 x 2160`, `60 fps`, video-only.
 - [ ] `CREDITS.md` has any new third-party attribution.
 - [ ] `NOTICE` preserves required third-party license notices.
 - [ ] `CHANGELOG.md` has release notes.

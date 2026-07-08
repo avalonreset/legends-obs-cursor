@@ -45,6 +45,11 @@ left-click ripples, and the magenta right-click diamond burst.
 
 If your viewer does not animate WebP, use the [GIF fallback](assets/demo/legends-cursor-demo.gif).
 
+For the real 4K scale version, watch the
+[4K60 showcase video](assets/demo/legends-cursor-showcase-4k60.mp4). It switches
+through momentum ticks, left-click, right-click, comet trail, stretch/wake, and
+finder modes on a simulated `3840 x 2160` OBS canvas.
+
 <p align="center">
   <img src="assets/screenshots/momentum-ticks.png" alt="Legends OBS Cursor momentum tick keyframe" width="32%">
   <img src="assets/screenshots/left-click-ripple.png" alt="Legends OBS Cursor left-click ripple keyframe" width="32%">
@@ -130,6 +135,7 @@ powershell -ExecutionPolicy Bypass -File .\install_into_obs.ps1 -TargetSourceNam
 | `install_and_launch_obs.cmd` | Double-click wrapper that installs and launches OBS. |
 | `assets/` | README banner, animated demo, social preview, and keyframes. |
 | `tools/render_assets.py` | Rebuilds generated README assets. |
+| `tools/render_showcase.py` | Renders the 4K60 showcase video. |
 | `tools/validate_package.ps1` | Local package validation gate. |
 
 ## Development
@@ -144,6 +150,12 @@ Regenerate the README images after changing the visual language:
 
 ```powershell
 python .\tools\render_assets.py
+```
+
+Regenerate the full 4K60 showcase video:
+
+```powershell
+python .\tools\render_showcase.py
 ```
 
 For OBS scene testing, use a duplicate scene collection first. Do not hot-edit a live recording scene unless you already made a backup and understand the risk.

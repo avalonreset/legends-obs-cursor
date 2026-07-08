@@ -19,6 +19,7 @@ $required = @(
     "assets/banner.webp",
     "assets/demo/legends-cursor-demo.webp",
     "assets/demo/legends-cursor-demo.gif",
+    "assets/demo/legends-cursor-showcase-4k60.mp4",
     "assets/screenshots/momentum-ticks.png",
     "assets/screenshots/left-click-ripple.png",
     "assets/screenshots/right-click-diamond.png"

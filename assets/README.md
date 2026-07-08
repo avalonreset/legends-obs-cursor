@@ -9,10 +9,13 @@ This folder contains generated presentation assets for the GitHub README.
   deterministic simulation of the Lua filter defaults.
 - `demo/legends-cursor-demo.gif` is the GIF fallback for viewers that do not
   animate WebP.
+- `demo/legends-cursor-showcase-4k60.mp4` is the full `3840 x 2160`, `60 fps`
+  mode-switching showcase video.
 - `screenshots/*.png` are keyframes from the same deterministic demo renderer.
 
 Regenerate optimized assets with:
 
 ```powershell
 python .\tools\render_assets.py
+python .\tools\render_showcase.py
 ```
