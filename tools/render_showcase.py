@@ -522,6 +522,70 @@ def render_video(output: Path, width: int, height: int, fps: int, crf: int) -> N
         raise SystemExit(f"ffmpeg exited with {code}")
 
 
+def transcode_webm(source: Path, output: Path) -> None:
+    subprocess.run(
+        [
+            "ffmpeg",
+            "-y",
+            "-hide_banner",
+            "-loglevel",
+            "error",
+            "-i",
+            str(source),
+            "-an",
+            "-c:v",
+            "libvpx-vp9",
+            "-b:v",
+            "0",
+            "-crf",
+            "34",
+            "-row-mt",
+            "1",
+            "-tile-columns",
+            "2",
+            "-cpu-used",
+            "4",
+            "-pix_fmt",
+            "yuv420p",
+            str(output),
+        ],
+        check=True,
+    )
+
+
+def transcode_readme_webp(source: Path, output: Path) -> None:
+    subprocess.run(
+        [
+            "ffmpeg",
+            "-y",
+            "-hide_banner",
+            "-loglevel",
+            "error",
+            "-i",
+            str(source),
+            "-vf",
+            "fps=30,scale=1600:-1:flags=lanczos",
+            "-loop",
+            "0",
+            "-c:v",
+            "libwebp_anim",
+            "-lossless",
+            "0",
+            "-q:v",
+            "78",
+            "-compression_level",
+            "6",
+            "-preset",
+            "drawing",
+            "-an",
+            "-vsync",
+            "0",
+            str(output),
+        ],
+        check=True,
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Render the Legends OBS Cursor showcase video.")
     parser.add_argument("--preview", action="store_true", help="Render a faster 1280x720 preview.")
@@ -538,6 +602,13 @@ def main() -> None:
 
     render_video(output, width, height, fps, args.crf)
     print(f"wrote {output} ({output.stat().st_size} bytes)")
+    if not args.preview:
+        webm = output.with_suffix(".webm")
+        webp = output.with_name("legends-cursor-showcase.webp")
+        transcode_webm(output, webm)
+        print(f"wrote {webm} ({webm.stat().st_size} bytes)")
+        transcode_readme_webp(output, webp)
+        print(f"wrote {webp} ({webp.stat().st_size} bytes)")
 
 
 if __name__ == "__main__":

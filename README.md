@@ -40,15 +40,14 @@ floaty follow, speed-driven spin, rotating momentum ticks, comet trail samples,
 left-click ripples, and the magenta right-click diamond burst.
 
 <p align="center">
-  <img src="assets/demo/legends-cursor-demo.webp" alt="Animated demo of Legends OBS Cursor showing momentum ticks, left-click ripple, right-click diamond, and floaty follow motion" width="100%">
+  <img src="assets/demo/legends-cursor-showcase.webp" alt="Looping animated showcase of Legends OBS Cursor switching through momentum ticks, left-click ripple, right-click diamond, comet trail, stretch wake, and finder modes" width="100%">
 </p>
 
-If your viewer does not animate WebP, use the [GIF fallback](assets/demo/legends-cursor-demo.gif).
-
 For the real 4K scale version, watch the
-[4K60 showcase video](assets/demo/legends-cursor-showcase-4k60.mp4). It switches
-through momentum ticks, left-click, right-click, comet trail, stretch/wake, and
-finder modes on a simulated `3840 x 2160` OBS canvas.
+[4K60 WebM](assets/demo/legends-cursor-showcase-4k60.webm) or
+[4K60 MP4](assets/demo/legends-cursor-showcase-4k60.mp4). It switches through
+momentum ticks, left-click, right-click, comet trail, stretch/wake, and finder
+modes on a simulated `3840 x 2160` OBS canvas.
 
 <p align="center">
   <img src="assets/screenshots/momentum-ticks.png" alt="Legends OBS Cursor momentum tick keyframe" width="32%">
